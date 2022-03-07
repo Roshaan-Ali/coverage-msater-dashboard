@@ -1,5 +1,5 @@
 {
-    "baseUrl": "https://ed68-110-93-244-255.ngrok.io",
+    "baseUrl": "https://50f3-103-244-176-173.ngrok.io",
     "frontBaseUrl":"https://coverage-master-user-demo.surge.sh",
     "secret_key":"SECRETKEY"
 }

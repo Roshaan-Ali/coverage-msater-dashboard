@@ -6,6 +6,7 @@ import {
   Switch,
   useLocation,
   Redirect,
+  BrowserRouter,
 } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import ShareScreen from "./screens/sharescreen/ShareScreen";
@@ -26,6 +27,7 @@ import ProfileScreen from "./screens/ProfileScreen";
 import InsightsScreen from "./screens/InsightsScreen";
 import PackagesPricingScreen from "./screens/Packages/PackagesPricingScreen";
 import InvitedUserSetPaswrdScreen from "./screens/AuthScreens/InvitedUserSetPaswrdScreen";
+import history from "./history";
 
 const AfterLoggedInRouting = () => {
   const state = useSelector((state) => state.UserReducer);
@@ -72,7 +74,7 @@ const RoutingContainer = () => {
   const state = useSelector((state) => state.UserReducer);
   return (
     <>
-      <Router>
+      <Router basename="/coverage-dashboard" history={history}>
         <Switch>
           <Route exact path="/">
             <SignInScreen />
@@ -114,7 +116,9 @@ function App() {
       />
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <RoutingContainer />
+          <BrowserRouter basename="/dashboard">
+            <RoutingContainer />
+          </BrowserRouter>
         </PersistGate>
       </Provider>
     </>

@@ -8,14 +8,17 @@ import "./style/keyframes.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import 'react-loading-skeleton/dist/skeleton.css'
+import "react-loading-skeleton/dist/skeleton.css";
 import "react-calendar/dist/Calendar.css";
 import "cropperjs/dist/cropper.css";
 import "./style/coverbook.css";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename="/landing">
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
