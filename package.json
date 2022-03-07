@@ -1,6 +1,7 @@
 {
   "name": "coverage-master-userside",
   "version": "0.1.0",
+  "homepage": "http:/20.203.45.189/coverage-dashboard/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
