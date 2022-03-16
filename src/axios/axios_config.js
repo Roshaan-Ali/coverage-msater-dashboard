@@ -1,7 +1,7 @@
 const axios = require("axios").default;
 
 const instance = axios.create({
-  baseURL: "https://50f3-103-244-176-173.ngrok.io",
+  baseURL: "http://20.203.45.189:3000",
   timeout: 80000
 });
 
